@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p><h1>B  I  E  N  V  E  N  I  D  O </h1></p>
+        <p><h3>CAJERO AUTOMÁTICO</h3></p>
+<br>
+
+
+<label for="">Cuenta Mali Saldo:</label>
+<input type="text" name="Cantidad 1" id="C1" value="200">
+<form action="">
+    <input type="text" name="" id="Cant1" placeholder="Cantidad">
+    <input type="button" value="Depositar" id="bt1" onclick="formula1()">
+    <input type="button" value="Retirar" id="bt4" onclick="formula4()">
+</form>
+
+<br><br>
+
+<label for="">Cuenta Gera Saldo:</label>
+<input type="text" name="Cantidad 2" id="C2" value="290">
+<form action="">       
+    <input type="text" name="" id="Cant2" placeholder="Cantidad">
+    <input type="button" value="Depositar" id="bt2" onclick="formula2()">
+    <input type="button" value="Retirar" id="bt5" onclick="formula5()">
+</form>
+
+<br><br>
+
+<label for="">Cuenta Maui Saldo:</label>
+<input type="text" name="Cantidad 3" id="C3" value="67">
+<form action="">        
+    <input type="text" name="" id="Cant3" placeholder="Cantidad">
+    <input type="button" value="Depositar" id="bt3" onclick="formula3()">
+    <input type="button" value="Retirar" id="bt6" onclick="formula6()">
+</form>
+
+<br><br>
+
+<script>
+    function formula1(){
+        var CantidadT=parseInt(document.getElementById('Cant1').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C1'). value=(Cantidad1+CantidadT);
+       }
+       function formula2(){
+        var CantidadT=parseInt(document.getElementById('Cant2').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C2'). value=(Cantidad2+CantidadT);
+       }
+       function formula3(){
+        var CantidadT=parseInt(document.getElementById('Cant3').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C3'). value=(Cantidad3+CantidadT);
+       }
+       function formula4(){
+        var CantidadT=parseInt(document.getElementById('Cant1').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C1'). value=(Cantidad1-CantidadT);
+       }
+       function formula5(){3
+        var CantidadT=parseInt(document.getElementById('Cant2').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C2'). value=(Cantidad2-CantidadT);
+       }
+       function formula6(){
+        var CantidadT=parseInt(document.getElementById('Cant3').value);
+        var Cantidad1=parseInt(document.getElementById('C1').value);
+        var Cantidad2=parseInt(document.getElementById('C2').value);
+        var Cantidad3=parseInt(document.getElementById('C3').value);
+        document.getElementById('C3'). value=(Cantidad3-CantidadT);
+       }
+</script>
+
+
+<div class="menuCajero" id="menuCajero"><!--Estos botones azules no funcionan-->
+    <button class="opcion" data-opcion="saldo">Saldo</button>
+    <button class="opcion" data-opcion="retiro">Retiro</button>
+    <button class="opcion" data-opcion="deposito">Depósito</button>
+    <button class="opcion" data-opcion="salir">SALIR</button>
+</div>
+
+    <!--  <script src="script.js"></script>   -->
+    
+    <!-- ***Deshabilitar "script.js" para que funcionen los botones de las operaciones*** -->
+    <!-- ***Si habilitas "script.js" funciona una secuencia de prompt pero no realiza las operaciones*** -->
+
+
+</body>
+</html>
